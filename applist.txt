@@ -3,5 +3,4 @@ App list:
 nodecal: a simple calendar
 nodecalc: a simple calculator
 nodetxt: a simple text editor
-nodeupd: a simple app updater
 tetris
