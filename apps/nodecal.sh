@@ -27,7 +27,7 @@ do
     read -p "Contents of event:" contents
 
     echo "$date $contents" >> data/calendar.txt
-    cat data/calendar.txt
+    sort -r data/calendar.txt
 
   elif [ "$rw" == "read" ];
   then
