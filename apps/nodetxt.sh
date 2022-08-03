@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-cd leafos_files
+cd leafos-files
 ls
 
 echo "Navigate and create directories with mkdir, cd, ls, and rm."
@@ -39,7 +39,7 @@ read -p "Name of file: " filename
 #main file editor
 while true
 do
-  cat $filename
+  cat -n $filename
   read -p "Mode: read, add, remove, overwrite, delete, or exit: " mode
 
   if [ "$mode" == "read" ];
@@ -47,7 +47,6 @@ do
     ls
   elif [ "$mode" == "add" ];
   then
-    read -p "Line number: " lnn
     read -p "Write to file: " contents
     echo "$contents" >> "$filename"
   elif [ "$mode" == "remove" ];
