@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+clear
+
 #important variables
 declare -ia board    # array that keeps track of game status
 declare -i pieces    # number of pieces present on board
