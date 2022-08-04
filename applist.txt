@@ -1,7 +1,7 @@
-App list:
-2048
-nodecal: a simple calendar
-nodecalc: a simple calculator
-nodeterm: a simple terminal
-nodetxt: a simple text editor
-tetris
+ update
+ 2048
+ nodecal: a simple calendar
+ nodecalc: a simple calculator
+ nodeterm: a simple terminal
+ nodetxt: a simple text editor
+ tetris
