@@ -13,7 +13,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-cd leafos-files
+clear
+cd docs
 ls
 
 echo "Navigate and create directories with mkdir, cd, ls, and rm."
