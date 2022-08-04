@@ -18,6 +18,7 @@
 clear
 
 cat data/applist.txt
+tput cup 0 0
 
 cursor=0
 
