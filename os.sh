@@ -17,6 +17,8 @@
 
 clear
 
+cat data/applist.txt
+
 cursor=0
 
 #keyboard input
