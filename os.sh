@@ -17,6 +17,7 @@
 
 clear
 
+tput cup 1 0
 cat data/applist.txt
 tput cup 0 0
 
@@ -46,7 +47,7 @@ function key_react {
 function cmpio {
   case $1 in
 
-  0)
+  1)
     ./os/nodeupd.sh
     ;;
   1)
@@ -67,16 +68,6 @@ function cmpio {
   6)
     ./apps/tetris.sh
     ;;
-  7)
-    echo Unavialable
-    ;;
-  8)
-    echo Unavailable
-    ;;
-  9)
-    echo Unavailable
-    ;;
-
   *)
     ;;
 esac
@@ -97,7 +88,11 @@ function main {
   do
     key_react
     clear
+    tput cup 1 0
     cat data/applist.txt
+    tput cup 0 0
+    currentDate=`date +"%T"`
+    echo "$currentDate"
     tput cup $cursor 0
   done
 
