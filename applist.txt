@@ -1,4 +1,4 @@
- update
+ nodeupd: a simple updater
  2048
  nodecal: a simple calendar
  nodecalc: a simple calculator
