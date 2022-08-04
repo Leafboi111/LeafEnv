@@ -17,6 +17,8 @@
 
 clear
 
+
+date +"%T"
 tput cup 1 0
 cat data/applist.txt
 tput cup 0 0
