@@ -22,14 +22,14 @@ date +"%D %T"
 while true
 do
   tput setaf 4
-  read -p "read, write, or exit:" rw
+  read -p "read, write, or exit: " rw
 
   if [ "$rw" == "write" ];
   then
     tput setaf 7
 
-    read -p "Date of event:" date
-    read -p "Contents of event:" contents
+    read -p "Date of event: " date
+    read -p "Contents of event: " contents
 
     echo "$date $contents" >> data/calendar.txt
     sort -r data/calendar.txt
