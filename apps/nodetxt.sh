@@ -15,17 +15,17 @@
 
 clear
 cd docs
-tput setaf 4
+tput setaf 45
 ls
 
-tput setaf 11
+tput setaf 226
 
 read -p "Name of file: " filename
 
 #main file editor
 while true
 do
-  tput setaf 11
+  tput setaf 226
   clear
   echo "Contents:"
   cat -n $filename
