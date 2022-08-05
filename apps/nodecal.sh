@@ -14,6 +14,9 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 clear
+
+tput setaf 1
+
 date +"%D %T"
 
 while true
@@ -23,7 +26,7 @@ do
 
   if [ "$rw" == "write" ];
   then
-    tput setaf 9
+    tput setaf 7
 
     read -p "Date of event:" date
     read -p "Contents of event:" contents
