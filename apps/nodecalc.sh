@@ -28,7 +28,7 @@ do
   then
     exit
   fi
-  tput setaf 9
+  tput setaf 1
   read -p "a=" a;
   read -p "b=" b;
 
