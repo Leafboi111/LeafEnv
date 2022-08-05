@@ -18,7 +18,7 @@ date +"%D %T"
 
 while true
 do
-  tput setaf 11
+  tput setaf 4
   read -p "read, write, or exit:" rw
 
   if [ "$rw" == "write" ];
