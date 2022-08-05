@@ -18,7 +18,7 @@ cd docs
 tput setaf 4
 ls
 
-tput setaf 13
+tput setaf 11
 
 read -p "Name of file: " filename
 
