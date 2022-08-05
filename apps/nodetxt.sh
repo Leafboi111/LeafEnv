@@ -24,6 +24,7 @@ read -p "Name of file: " filename
 #main file editor
 while true
 do
+  clear
   cat -n $filename
   read -p "Mode: read, add, or remove: " mode
 
