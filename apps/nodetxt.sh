@@ -17,23 +17,7 @@ clear
 cd docs
 ls
 
-echo "Navigate and create directories with mkdir, cd, ls, and rm."
-echo "Press enter to continue"
-
-#exit if statement
-while true
-do
-  read -p ">" cmd
-
-  if [ "$cmd" == "" ];
-  then
-    break
-  else
-    $cmd
-  fi
-done
-
-ls
+tput setaf 7
 
 read -p "Name of file: " filename
 
@@ -41,25 +25,18 @@ read -p "Name of file: " filename
 while true
 do
   cat -n $filename
-  read -p "Mode: read, add, remove, overwrite, delete, or exit: " mode
+  read -p "Mode: read, add, or remove: " mode
 
   if [ "$mode" == "read" ];
   then
     ls
   elif [ "$mode" == "add" ];
   then
-    read -p "Write to file: " contents
+    read -p "$(tput setaf 11)Write to file: " contents
     echo "$contents" >> "$filename"
   elif [ "$mode" == "remove" ];
   then
     sed -i '$d' $filename
-  elif [ "$mode" == "overwrite" ];
-  then
-    read -p "Overwrite to file: " contents
-    echo "$contents" > "$filename"
-  elif [ "$mode" == "delete" ];
-  then
-    rm -f $filename
   else
     break
   fi
