@@ -13,15 +13,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-tput setaf 13
-
 clear
 
 set a b operation;
 
 while true
 do
-
+  tput setaf 13
   echo -e "Select operation type: + - * / or type exit";
   read operation;
   if [ "$operation" == "exit" ];
