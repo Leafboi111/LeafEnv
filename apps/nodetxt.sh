@@ -17,7 +17,7 @@ clear
 cd docs
 ls
 
-tput setaf 7
+tput setaf 6
 
 read -p "Name of file: " filename
 
@@ -32,7 +32,7 @@ do
     ls
   elif [ "$mode" == "add" ];
   then
-    read -p "$(tput setaf 11)Write to file: " contents
+    read -p "$(tput setaf 4)Write to file: " contents
     echo "$contents" >> "$filename"
   elif [ "$mode" == "remove" ];
   then
