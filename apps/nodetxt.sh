@@ -26,6 +26,7 @@ read -p "Name of file: " filename
 while true
 do
   clear
+  echo "Contents:"
   cat -n $filename
   read -p "Mode: read, add, or remove: " mode
 
