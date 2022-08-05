@@ -25,6 +25,7 @@ read -p "Name of file: " filename
 #main file editor
 while true
 do
+  tput setaf 11
   clear
   echo "Contents:"
   cat -n $filename
