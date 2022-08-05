@@ -17,7 +17,7 @@ clear
 cd docs
 ls
 
-tput setaf 6
+tput setaf 14
 
 read -p "Name of file: " filename
 
