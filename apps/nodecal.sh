@@ -15,7 +15,7 @@
 
 clear
 
-tput setaf 1
+tput setaf 4
 
 date +"%D %T"
 
