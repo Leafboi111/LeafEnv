@@ -15,9 +15,10 @@
 
 clear
 cd docs
+tput setaf 4
 ls
 
-tput setaf 14
+tput setaf 13
 
 read -p "Name of file: " filename
 
