@@ -20,9 +20,9 @@ set a b operation;
 while true
 do
   tput setaf 13
-  echo -e "Select operation type: + - * / or type exit";
+  echo -e "Select operation type: + - * / or press enter to exit";
   read operation;
-  if [ "$operation" == "exit" ];
+  if [ "$operation" == "" ];
   then
     exit
   fi
