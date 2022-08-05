@@ -36,7 +36,7 @@ do
     ls
   elif [ "$mode" == "add" ];
   then
-    read -p "$(tput setaf 4)Write to file: " contents
+    read -p "$(tput setaf 45)Write to file: " contents
     echo "$contents" >> "$filename"
   elif [ "$mode" == "remove" ];
   then
