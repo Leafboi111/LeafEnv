@@ -18,11 +18,12 @@ date +"%D %T"
 
 while true
 do
-
-  read -p "read, write, delete, or exit:" rw
+  tput setaf 11
+  read -p "read, write, or exit:" rw
 
   if [ "$rw" == "write" ];
   then
+    tput setaf 9
 
     read -p "Date of event:" date
     read -p "Contents of event:" contents
@@ -32,14 +33,7 @@ do
 
   elif [ "$rw" == "read" ];
   then
-
     cat data/calendar.txt
-
-  elif [ "$rw" == "delete" ];
-  then
-
-    echo "" > data/calendar.txt
-
   else
     break
   fi
