@@ -15,18 +15,18 @@
 
 clear
 
-tput setaf 4
+tput setaf 45
 
 date +"%D %T"
 
 while true
 do
-  tput setaf 4
+  tput setaf 45
   read -p "read, write, or exit: " rw
 
   if [ "$rw" == "write" ];
   then
-    tput setaf 7
+    tput setaf 255
 
     read -p "Date of event: " date
     read -p "Contents of event: " contents
