@@ -29,7 +29,7 @@ do
   clear
   echo "Contents:"
   cat -n $filename
-  read -p "Mode: read, add, or remove: " mode
+  read -p "Mode: read, add, or remove or press enter to exit: " mode
 
   if [ "$mode" == "read" ];
   then
