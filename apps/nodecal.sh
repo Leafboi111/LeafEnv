@@ -26,7 +26,7 @@ do
 
   if [ "$rw" == "write" ];
   then
-    tput setaf 51
+    tput setaf 207
 
     read -p "Date of event: " date
     read -p "Contents of event: " contents
