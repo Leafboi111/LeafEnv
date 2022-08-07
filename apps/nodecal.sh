@@ -36,7 +36,7 @@ do
 
   elif [ "$rw" == "read" ];
   then
-    cat data/calendar.txt
+    sort -r data/calendar.txt
   else
     break
   fi
