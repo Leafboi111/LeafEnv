@@ -22,7 +22,7 @@ date +"%D %T"
 while true
 do
   tput setaf 214
-  read -p "read, write, or exit: " rw
+  read -n "read, write, or exit: " rw
 
   if [ "$rw" == "write" ];
   then
@@ -36,7 +36,7 @@ do
 
   elif [ "$rw" == "read" ];
   then
-    sort -g data/calendar.txt
+    sort -n data/calendar.txt
   else
     break
   fi
