@@ -32,11 +32,11 @@ do
     read -p "Contents of event: " contents
 
     echo "$date $contents" >> data/calendar.txt
-    sort data/calendar.txt
+    sort -g data/calendar.txt
 
   elif [ "$rw" == "read" ];
   then
-    sort data/calendar.txt
+    sort -g data/calendar.txt
   else
     break
   fi
