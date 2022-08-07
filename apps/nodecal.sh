@@ -22,7 +22,7 @@ date +"%D %T"
 while true
 do
   tput setaf 214
-  read -n "read, write, or exit: " rw
+  read -p "read, write, or exit: " rw
 
   if [ "$rw" == "write" ];
   then
@@ -32,7 +32,7 @@ do
     read -p "Contents of event: " contents
 
     echo "$date $contents" >> data/calendar.txt
-    sort -g data/calendar.txt
+    sort -n data/calendar.txt
 
   elif [ "$rw" == "read" ];
   then
