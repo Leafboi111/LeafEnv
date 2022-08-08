@@ -1,6 +1,6 @@
-from colorama import init
+#from colorama import init
 init()
-from colorama import Fore, Style
+#from colorama import Fore, Style
 import time as t
 import random as r
 
