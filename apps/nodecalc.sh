@@ -31,5 +31,6 @@ do
   read -p "b=" b;
 
   echo "Result:" $(($a$operation$b));
+  echo "$a $operation $b" | bc -l
 
 done
