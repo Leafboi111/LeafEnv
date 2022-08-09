@@ -30,6 +30,6 @@ do
   read -p "a=" a;
   read -p "b=" b;
 
-  echo "Result: $a $operation $b" | bc -l
+  echo "$a $operation $b" | bc -l
 
 done
