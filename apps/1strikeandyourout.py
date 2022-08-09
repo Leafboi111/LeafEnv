@@ -63,3 +63,69 @@ else:
       print("You're out!")
       t.sleep(1)
       quit()
+    else:
+      q4 = input("If there are 3 apples in a bowl and you take 2, how many apples do you have? ")
+      if q4 != "2":
+        print("Strikes: 1")
+        t.sleep(1)
+        print("You're out!")
+        t.sleep(1)
+        quit()
+      else:
+        q5 = input("Who made this Repl? ")
+        if q5.strip() != "Vargskelethor":
+          print("Strikes: 1")
+          t.sleep(1)
+          print("You're out!")
+          t.sleep(1)
+          quit()
+        else:
+          q6 = input("What is the product of the atomic numbers for Bohrium and Rutherfordium? ")
+          if q6 != "11128":
+            print("Strikes: 1")
+            t.sleep(1)
+            print("You're out!")
+            t.sleep(1)
+            quit()
+          else:
+            q7 = input("Stop! ")
+            if q7.lower() != "hammer time!":
+              print("Strikes: 1")
+              t.sleep(1)
+              print("You're out!")
+              t.sleep(1)
+              quit()
+            else:
+              q8 = input("How many times can you subtract 20 from 200? ")
+              if q8 != "1":
+                print("Strikes: 1")
+                t.sleep(1)
+                print("You're out!")
+                t.sleep(1)
+                quit()
+              else:
+                q9 = input("What time is it? ")
+                if q9.lower().strip() != "it's showtime!":
+                  print("Strikes: 1")
+                  t.sleep(1)
+                  print("You're out!")
+                  t.sleep(1)
+                  quit()
+                else:
+                  q10 = input("Never gonna ")
+                  if q10.lower() != "give you up":
+                    print("Strikes: 1")
+                    t.sleep(1)
+                    print("You're out!")
+                    t.sleep(1)
+                    quit()
+                  else:
+                    q11 = input("What is the 25th island of Greece? ")
+                  if q11.lower().strip() != "amorgos":
+                    print("Strikes: 1")
+                    t.sleep(1)
+                    print("You're out!")
+                    t.sleep(1)
+                    quit()
+                  else:  
+                    print("You finished the game in",round(t.time()-start_time,2),'seconds!')
