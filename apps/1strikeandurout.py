@@ -2,7 +2,7 @@ import os
 import time as t
 import random as r
 
-os.clear()
+os.system('clear')
 
 print("+----------------------------+")
 print("| One Strike and You're Out! |")
