@@ -6,6 +6,7 @@ str2="Add_file"
 str3="Remove_file/directory"
 str4="Add_directory"
 filename=""
+filearr=()
 
 function addfile {
   read -p "Name of file: " filename
@@ -51,16 +52,34 @@ function selectfile {
   done
 }
 
+function readfile {
+
+  filename="test.txt"
+  x=0
+
+  while read -r line || [[ -n "$line" ]]; do
+    filearr[x]=$line
+    let x++
+  done <$filename
+
+}
+
 function editfile {
   while true
   do
     clear
-    cat -n $filename
-    read -p "add or remove line or press enter to exit: "  addrm
+    cat -n $filename; echo
+    read -p "add, replace or remove line or press enter to exit: "  addrm
     if [ "$addrm" == "add" ];
     then
       read -p "Contents of file: " contents
-      echo "$contents" >> "$filename"
+      echo $contents >> $filename
+    elif [ "$addrm" == "replace" ];
+    then
+      read -p "Line Number: " lnn
+      read -p "Contents of file: " contents
+      filearr[(($lnn-1))]=$contents
+      printf "%s\n" "${filearr[@]}" > $filename
     elif [ "$addrm" == "remove" ];
     then
       sed -i '$d' $filename
@@ -72,5 +91,7 @@ function editfile {
 
 tput setaf 214
 selectfile
+readfile
 tput setaf 39
 editfile
+printf "%s\n" "${filearr[@]}" > $filename
