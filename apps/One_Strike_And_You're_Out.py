@@ -128,4 +128,12 @@ else:
                     t.sleep(1)
                     quit()
                   else:  
+                    q12 = input("Is Dihydrogen Monoxide dangerous?")
+                  if q12.lower() != "no, it's just water":
+                    print("Strikes: 1")
+                    t.sleep(1)
+                    print("You're out!")
+                    t.sleep(1)
+                    quit()
+                  else:
                     print("You finished the game in",round(t.time()-start_time,2),'seconds!')
