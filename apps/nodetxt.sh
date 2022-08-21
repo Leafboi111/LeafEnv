@@ -33,7 +33,7 @@ function selectfile {
 
   while true
   do
-    teststr="$str1 $str2 $str3 $str4 $("ls")"
+    teststr="$str1 $str2 $str3 $str4 $str5 $("ls")"
     clear
     select input in $teststr
     do
