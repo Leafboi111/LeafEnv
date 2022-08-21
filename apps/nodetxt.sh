@@ -48,7 +48,7 @@ function selectfile {
         removefile
       elif [ "$input" == "Add_directory" ];
       then
-        adddirectory
+        addirectory
       elif [ "$input" == "Go_to_directory" ];
       then
         gotodirectory
