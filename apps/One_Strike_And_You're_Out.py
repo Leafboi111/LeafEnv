@@ -137,3 +137,4 @@ else:
                     quit()
                   else:
                     print("You finished the game in",round(t.time()-start_time,2),'seconds!')
+                    sleep 5
