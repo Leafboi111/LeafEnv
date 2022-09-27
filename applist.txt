@@ -1,3 +1,5 @@
  2048
  tetris
- snake 
+ snake
+ one strike your out.
+ 
