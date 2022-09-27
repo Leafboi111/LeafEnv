@@ -200,13 +200,13 @@ getchar() {
             [qQ]) kill -$SIG_QUIT $game_pid
                   return
                   ;;
-            [kK]) kill -$SIG_UP $game_pid
+            [wW]) kill -$SIG_UP $game_pid
                   ;;
-            [lL]) kill -$SIG_RIGHT $game_pid
+            [dD]) kill -$SIG_RIGHT $game_pid
                   ;;
-            [jJ]) kill -$SIG_DOWN $game_pid
+            [sS]) kill -$SIG_DOWN $game_pid
                   ;;
-            [hH]) kill -$SIG_LEFT $game_pid
+            [aA]) kill -$SIG_LEFT $game_pid
                   ;;
        esac
     done
