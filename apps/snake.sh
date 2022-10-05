@@ -161,16 +161,16 @@ drawborder() {
    tput setf 9
 }
 
-SNAKECHAR="@"                          
-WALLCHAR="X"                            
-APPLECHAR="o"                          
+SNAKECHAR="-"
+WALLCHAR="|"
+APPLECHAR="o"
 
-SNAKESIZE=3                             
-DELAY=0.2                              
-FIRSTROW=3                              
-FIRSTCOL=1                             
-LASTCOL=40                             
-LASTROW=20                              
+SNAKESIZE=3
+DELAY=0.1
+FIRSTROW=3
+FIRSTCOL=1
+LASTCOL=40
+LASTROW=20
 AREAMAXX=$(( $LASTCOL - 1 ))           
 AREAMINX=$(( $FIRSTCOL + 1 ))          
 AREAMAXY=$(( $LASTROW - 1 ))           
