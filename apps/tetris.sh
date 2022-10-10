@@ -550,6 +550,27 @@ function check_keyboard_hit {
 		;;
 
 	* )
+	
+	"$up" )
+		do_on_key_w
+		return 1
+		;;
+		
+	"$down" )
+		do_on_key_s
+		return 2
+		;;
+		
+	"$left" )
+		do_on_key_a
+		return 3
+		;;
+		
+	"$right" )
+		do_on_key_d
+		return 4 
+		;;
+	* )
 		return 0
 		;;
 	esac
