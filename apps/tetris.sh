@@ -548,8 +548,6 @@ function check_keyboard_hit {
 		do_on_key_right
 		return 4
 		;;
-
-	* )
 	
 	"$up" )
 		do_on_key_w
