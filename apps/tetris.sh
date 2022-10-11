@@ -632,25 +632,25 @@ function check_keyboard_hit {
 	case "$key" in
 	"$up" )
 		do_on_key_up
-		do_on_key_w
+		do_on_w
 		return 1
 		;;
 
 	"$down" )
 		do_on_key_down
-		do_on_key_s
+		do_on_s
 		return 2
 		;;
 
 	"$left" )
 		do_on_key_left
-		do_on_key_a
+		do_on_a
 		return 3
 		;;
 
 	"$right" )
 		do_on_key_right
-		do_on_key_d
+		do_on_d
 		return 4
 		;;
 	*)
