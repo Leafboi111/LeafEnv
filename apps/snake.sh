@@ -122,6 +122,7 @@ gameover() {
    sleep $DELAY
    trap exit ALRM
    tput cup $ROWS 0
+   clear
    exit
 }
 
