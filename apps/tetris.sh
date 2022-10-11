@@ -466,87 +466,15 @@ function do_on_key_up {
 	(( col -= offset ))
 	print_up_move
 }
-# Stuffs to do when w key is hit
-function do_on_w {
-	local i=0
-	local j=0
-
-	local rotated=$(( current_num % 4 < 3 ? current_num + 1 : current_num - 3 ))
-	local offset=0 # Indicates number of squares to adjust horizontally
-	for (( i = 0; i < 4; ++i )); do
-		for (( j = 0; j < 4; ++j )); do
-			if (( blocks[ 16 * rotated + 4 * i + j ] == 1 )); then
-				if (( row + i >= rows )); then
-					return
-				fi
-
-				local tmp=0
-				if (( col + j < 0 )); then
-					tmp=$(( col + j ))
-					offset=$(( tmp < offset ? tmp : offset ))
-				elif (( col + j >= cols )); then
-					tmp=$(( col + j - cols + 1 ))
-					offset=$(( tmp > offset ? tmp : offset ))
-				fi
-			fi
-		done
-	done
-	for (( i = 0; i < 4; ++i )); do
-		for (( j = 0; j < 4; ++j )); do
-			if (( blocks[ 16 * rotated + 4 * i + j ] == 1 )); then
-				if (( map[ cols * (row + i) + col + j - offset ] != 0 )); then
-					return
-				fi
-			fi
-		done
-	done
-
-	current_num="$rotated"
-	for (( i = 0; i < 16; ++i )); do
-		(( current[ i ] = blocks[ 16 * rotated + i ] ))
-	done
-	(( col -= offset ))
-	print_up_move
-}
 
 # Stuffs to do when down key is hit
 function do_on_key_down {
 	calculate_distance
 	print_down_move "$?"
 }
-# Stuffs to do when s key is hit
-function do_on_s {
-	calculate_distance
-	print_down_move "$?"
-}
 
 # Stuffs to do when left key is hit
 function do_on_key_left {
-	local i=0
-	local j=0
-
-	for (( i = 0; i < 4; ++i )); do
-		for (( j = 0; j < 4; ++j )); do
-			if (( current[ 4 * j + i ] == 1 )); then
-				if (( col + i - 1 < 0 )); then
-					break
-				fi
-				if (( map[ cols * (row + j) + col + i - 1 ] != 0 )); then
-					break
-				fi
-			fi
-		done
-		if (( j != 4 )); then
-			break
-		fi
-	done
-	if (( i == 4 )); then
-		(( --col ))
-		print_horizontal_move 0
-	fi
-}
-# Stuffs to do when a key is hit
-function do_on_a {
 	local i=0
 	local j=0
 
@@ -596,31 +524,6 @@ function do_on_key_right {
 		print_horizontal_move 1
 	fi
 }
-# Stuffs to do when d key is hit
-function do_on_d {
-	local i=0
-	local j=0
-
-	for (( i = 0; i < 4; ++i )); do
-		for (( j = 0; j < 4; ++j )); do
-			if (( current[ 4 * j + 3 - i ] == 1 )); then
-				if (( col + 4 - i >= cols )); then
-					break
-				fi
-				if (( map[ cols * (row + j) + col + 4 - i ] != 0 )); then
-					break
-				fi
-			fi
-		done
-		if (( j != 4 )); then
-			break
-		fi
-	done
-	if (( i == 4 )); then
-		(( ++col ))
-		print_horizontal_move 1
-	fi
-}
 
 # Check if keyboard is hit and respond to specified keys
 #
@@ -632,25 +535,21 @@ function check_keyboard_hit {
 	case "$key" in
 	"$up" )
 		do_on_key_up
-		do_on_w
 		return 1
 		;;
 
 	"$down" )
 		do_on_key_down
-		do_on_s
 		return 2
 		;;
 
 	"$left" )
 		do_on_key_left
-		do_on_a
 		return 3
 		;;
 
 	"$right" )
 		do_on_key_right
-		do_on_d
 		return 4
 		;;
 	*)
