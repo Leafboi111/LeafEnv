@@ -467,7 +467,7 @@ function do_on_key_up {
 	print_up_move
 }
 # Stuffs to do when w key is hit
-function do_on_key_w {
+function do_on_w {
 	local i=0
 	local j=0
 
@@ -515,7 +515,7 @@ function do_on_key_down {
 	print_down_move "$?"
 }
 # Stuffs to do when s key is hit
-function do_on_key_s {
+function do_on_s {
 	calculate_distance
 	print_down_move "$?"
 }
@@ -546,7 +546,7 @@ function do_on_key_left {
 	fi
 }
 # Stuffs to do when a key is hit
-function do_on_key_a {
+function do_on_a {
 	local i=0
 	local j=0
 
@@ -597,7 +597,7 @@ function do_on_key_right {
 	fi
 }
 # Stuffs to do when d key is hit
-function do_on_key_d {
+function do_on_d {
 	local i=0
 	local j=0
 
