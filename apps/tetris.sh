@@ -226,6 +226,10 @@ function init_data {
 	readonly down=`printf "[B"`
 	readonly left=`printf "[D"`
 	readonly right=`printf "[C"`
+	readonly w=`printf "[A"`
+	readonly s=`printf "[B"`
+	readonly a=`printf "[D"`
+	readonly d=`printf "[C"`
 }
 
 ############################# Printing methods #################################
@@ -523,7 +527,7 @@ function do_on_key_right {
 
 # Check if keyboard is hit and respond to specified keys
 #
-# return: 1, 2, 3, 4 or 0 each corresponding to up, down, left, right or others
+# return: 1, 2, 3, 4 or 0 each corresponding to up, down, left, right, w, s, a, d, or others.
 function check_keyboard_hit {
 	local key=`head -c1`
 	[[ "$key" == "$esc" ]] || return 0
@@ -548,8 +552,7 @@ function check_keyboard_hit {
 		do_on_key_right
 		return 4
 		;;
-
-	* )
+	*)
 		return 0
 		;;
 	esac

@@ -54,13 +54,9 @@ move() {
    ( sleep $DELAY && kill -ALRM $$ ) &
    if [ "$POSX" -le "$FIRSTCOL" ] || [ "$POSX" -ge "$LASTCOL" ] ; then
       tput cup $(( $LASTROW + 1 )) 0
-      stty echo
-      echo " GAME OVER! You hit a wall!"
       gameover
    elif [ "$POSY" -le "$FIRSTROW" ] || [ "$POSY" -ge "$LASTROW" ] ; then
       tput cup $(( $LASTROW + 1 )) 0
-      stty echo
-      echo " GAME OVER! You hit a wall!"
       gameover
    fi
 
@@ -75,7 +71,6 @@ move() {
       if [ "$POSX" = "${LASTPOSX[$x]}" ] && [ "$POSY" = "${LASTPOSY[$x]}" ];
       then
          tput cup $(( $LASTROW + 1 )) 0
-         echo " GAME OVER! YOU ATE YOURSELF!"
          gameover
       fi
       x=$(( $x + 1 ))
