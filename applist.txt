@@ -1,5 +1,0 @@
- 2048
- tetris
- snake
- one strike your out.
- 
