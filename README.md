@@ -1,2 +1,2 @@
-# LeafOS
-An app list for updating LeafOS
+# LeafEnv
+An app list for updating LeafEnv
