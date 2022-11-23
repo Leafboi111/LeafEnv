@@ -63,7 +63,6 @@ function selectfile {
 
 function readfile {
 
-  filename="test.txt"
   x=0
 
   while read -r line || [[ -n "$line" ]]; do
@@ -103,4 +102,10 @@ selectfile
 readfile
 tput setaf 39
 editfile
-printf "%s\n" "${filearr[@]}" > $filename
+
+x=0
+
+while read -r line || [[ -n "$line" ]]; do
+  echo filearr[x] >> $filename
+  let x++
+done <$filename
